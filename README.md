@@ -1,98 +1,91 @@
-# stress-testing-commercial
+# Commercial Credit Stress Testing Project
 
-## 1. What this repo is
+This repository is the scenario and stress-testing layer in the commercial credit-risk stack. It uses upstream PD, LGD, EAD, and expected loss style inputs together with defined downturn scenarios to produce stressed facility, segment, and portfolio loss views. The outputs are designed to support downstream pricing, monitoring, and capital analysis in a clear portfolio-project format.
 
-This repository is a bank-style Australian credit-risk stress testing module for a commercial lending portfolio demonstration. It applies transparent scenario overlays to upstream Probability of Default (PD), Loss Given Default (LGD), Exposure at Default (EAD), and Expected Loss outputs, then shows portfolio impact clearly at facility, segment, and total portfolio level.
+## What this repo is
 
-The repository is intentionally employer-friendly. It demonstrates portfolio stress testing workflow, reproducible code structure, and practical reporting outputs without overstating model complexity.
+This project demonstrates how a commercial lending portfolio can be stress tested once the core risk component outputs already exist. It is structured as a recruiter-friendly workflow with transparent scenario assumptions, reproducible code, and reporting outputs that are easy to interpret.
 
-## 2. Where it sits in the full credit-risk stack
-
-`stress-testing-commercial` is the public GitHub repo for the portfolio stress-testing layer.
+## Where it sits in the stack
 
 Upstream inputs:
-
 - `industry-analysis`
 - `PD-and-scorecard-commercial`
 - `LGD-commercial`
 - `EAD-CCF-commercial`
 - `expected-loss-engine-commercial`
 
-Those upstream components provide the base risk inputs. This repo applies scenarios to those upstream components rather than building separate PD, LGD, or EAD models from scratch.
-
 Downstream consumers:
-
 - `RAROC-pricing-and-return-hurdle`
-- `Portfolio-Monitoring-MIS`
+- `portfolio-monitor-commercial` (planned downstream repo; not yet published on the public portfolio)
 - `RWA-capital-commercial`
 
-## 3. Inputs
+Some downstream modules are planned but not yet published on the public portfolio.
 
-The pipeline uses a facility-level upstream-style dataset with:
+## Example input datasets
 
-- facility and borrower identifiers
-- segment, product, industry, and state
-- base PD, LGD, EAD, and Expected Loss
-- outstanding balance, undrawn amount, current limit, and collateral value
-- a property security flag
-- an `upstream_source` field showing the conceptual source component
+- `data/raw/demo_upstream_risk_inputs.csv`: sample facility-level upstream risk dataset with PD, LGD, EAD, expected loss, collateral, industry, and maturity fields.
+- `data/external/stress_scenarios.csv`: reusable scenario table covering Base, Mild downturn, and Severe downturn assumptions.
 
-Included demo inputs:
+## Key outputs
 
-- `data/raw/demo_upstream_risk_inputs.csv`
-- `data/external/stress_scenarios.csv`
+- `outputs/tables/stress_scenario_results.csv`
+- `outputs/tables/pd_stress_uplift.csv`
+- `outputs/tables/lgd_stress_uplift.csv`
+- `outputs/tables/ead_stress_uplift.csv`
+- `outputs/tables/stress_loss_dashboard_inputs.csv`
+- `outputs/tables/stressed_expected_loss_by_facility.csv`
+- `outputs/tables/stressed_expected_loss_by_segment.csv`
+- `outputs/tables/portfolio_stress_summary.csv`
+- `outputs/tables/validation_report.csv`
 
-All included data is public-style synthetic demo data.
+## Example outputs
 
-## 4. What the pipeline does
+- `outputs/tables/portfolio_stress_summary.csv`: portfolio-level comparison of base versus stressed EAD and expected loss by scenario.
+- `outputs/tables/stressed_expected_loss_by_segment.csv`: segment view showing which borrower groups absorb the largest downturn uplift.
+- `outputs/tables/stress_loss_dashboard_inputs.csv`: reporting-ready table for charting scenario results in dashboards or presentation packs.
+- `outputs/reports/stress_testing_run_summary.md`: run summary with validation checks and generated file references.
+- `outputs/charts/portfolio_stressed_el_by_scenario.png`: chart showing expected loss movement across scenarios.
+- `outputs/charts/segment_stressed_el_severe_downturn.png`: chart highlighting segment concentrations in the severe scenario.
+- `outputs/samples/sample_portfolio_stress_summary.csv`: lightweight sample for quick review without rerunning the pipeline.
 
-The pipeline:
+## End-to-end workflow
 
-1. Loads synthetic upstream-style facility outputs and scenario assumptions.
-2. Standardises columns and validates input completeness.
-3. Applies base, mild downturn, and severe downturn overlays.
-4. Stresses PD, LGD, EAD, collateral values, and recovery timing using simple explainable formulas.
-5. Recalculates stressed Expected Loss.
-6. Aggregates stressed results by facility, segment, industry, and portfolio.
-7. Produces reporting-ready CSV tables, sample extracts, charts, and a validation report.
+1. Load the facility-level upstream demo dataset and scenario table.
+2. Validate required fields, duplicate structure, and scenario definitions.
+3. Apply scenario multipliers to PD, LGD, EAD, collateral values, and recovery timing.
+4. Recalculate stressed expected loss for each facility under each scenario.
+5. Aggregate results to facility, segment, and portfolio outputs.
+6. Write tables, charts, sample outputs, and a validation summary to `outputs/`.
 
-## 5. Outputs
+## Example business use case
 
-Required output tables are written to `outputs/tables/`:
+A portfolio manager wants to understand how a severe downturn would affect commercial property, SME, and agribusiness exposures before repricing or capital review. This repo makes that easy to show: the reviewer can open `portfolio_stress_summary.csv`, trace the uplift into `stressed_expected_loss_by_segment.csv`, and see which segments drive the change.
 
-- `stress_scenario_results.csv`
-- `pd_stress_uplift.csv`
-- `lgd_stress_uplift.csv`
-- `ead_stress_uplift.csv`
-- `stress_loss_dashboard_inputs.csv`
+## Repo structure
 
-Additional reviewer-friendly outputs include:
+- `data/`: raw, processed, and external stress scenario inputs
+- `src/`: reusable scenario, stress engine, validation, and reporting modules
+- `scripts/`: pipeline entry-point wrappers
+- `docs/`: methodology, assumptions, data dictionary, and validation notes
+- `notebooks/`: walkthrough notebooks for reviewer context
+- `outputs/`: exported tables, charts, reports, and sample artifacts
+- `tests/`: validation and regression checks
 
-- `stressed_expected_loss_by_facility.csv`
-- `stressed_expected_loss_by_segment.csv`
-- `portfolio_stress_summary.csv`
-- `portfolio_concentration_summary.csv`
-- `validation_report.csv`
+## How to run
 
-Supporting artefacts are also written to:
-
-- `outputs/charts/`
-- `outputs/reports/`
-- `outputs/samples/`
-
-## 6. How to run
-
-Install dependencies:
+Quick start:
 
 ```bash
 pip install -r requirements.txt
-```
-
-Run the stress-testing pipeline:
-
-```bash
 python scripts/run_pipeline.py
 ```
+
+After the run, start with:
+
+- `outputs/reports/stress_testing_run_summary.md`
+- `outputs/tables/portfolio_stress_summary.csv`
+- `outputs/charts/portfolio_stressed_el_by_scenario.png`
 
 Run validation tests:
 
@@ -100,27 +93,16 @@ Run validation tests:
 python -m pytest
 ```
 
-Open the notebooks in sequence for a walkthrough:
+## Testing and validation
 
-```bash
-jupyter notebook notebooks/
-```
+- `tests/test_stress_pipeline.py` checks that demo inputs pass validation before the engine runs.
+- The test suite confirms scenario ordering, so Severe downturn produces higher expected loss than Mild downturn, and Mild downturn is above Base.
+- Base scenario outputs are checked against upstream components to confirm that unstressed PD, LGD, and EAD are preserved.
+- Facility-level stressed outputs are reconciled back to the portfolio summary, and the generated `outputs/tables/validation_report.csv` records the same validation logic in a reviewer-friendly format.
 
-## 7. Limitations and synthetic-data note
+## Limitations / Demo-Only Note
 
-This repository uses synthetic demo data only. It does not use confidential bank data and should be read as a portfolio demonstration rather than a production stress testing framework.
-
-Practical limitations:
-
-- scenario multipliers are illustrative rather than macro-model calibrated
-- collateral haircuts and recovery delays are simplified overlays
-- concentration effects are rule-based
-- the module assumes upstream base PD, LGD, EAD, and Expected Loss values already exist
-
-## 8. How it connects to the next repo
-
-The stressed outputs are designed to pass into downstream pricing, monitoring, and capital views:
-
-- `RAROC-pricing-and-return-hurdle` can use stressed loss and exposure metrics for pricing sensitivity
-- `Portfolio-Monitoring-MIS` can use scenario outputs for dashboarding and concentration views
-- `RWA-capital-commercial` can use stressed EAD and loss views for capital sensitivity analysis
+- All data is synthetic and is provided for demonstration only.
+- Scenario multipliers and overlays are illustrative rather than macro-model calibrated.
+- The repo is intended to show workflow design and reporting quality, not to represent a live bank stress-testing framework.
+- Some downstream modules are planned but not yet published on the public portfolio.
