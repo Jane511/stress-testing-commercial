@@ -1,0 +1,9 @@
+status,check
+PASS,stressed_pd values are within configured bounds.
+PASS,stressed_lgd values are within configured bounds.
+PASS,stressed_ead values are non-negative.
+PASS,stressed_expected_loss values are non-negative.
+PASS,Base scenario reconciles to upstream Expected Loss.
+PASS,Severe downturn increases portfolio Expected Loss versus base.
+PASS,Facility-level base Expected Loss reconciles to portfolio summary.
+PASS,Facility-level stressed Expected Loss reconciles to portfolio summary.

@@ -1,0 +1,37 @@
+scenario_name,facility_id,borrower_id,segment,industry,base_pd,stressed_pd,pd_uplift_pct,industry_overlay_factor,property_pd_overlay_factor,concentration_overlay_factor
+Base,F001,B001,SME,Construction,0.024,0.024,0.0,1.0,1.0,1.0
+Base,F002,B002,Commercial Property,Property Services,0.018,0.018,0.0,1.0,1.0,1.0
+Base,F003,B003,SME,Retail Trade,0.032,0.032,0.0,1.0,1.0,1.0
+Base,F004,B004,Commercial,Manufacturing,0.021,0.021,0.0,1.0,1.0,1.0
+Base,F005,B005,Agribusiness,Agriculture,0.027,0.027,0.0,1.0,1.0,1.0
+Base,F006,B006,Property Investor,Property Services,0.014,0.014,0.0,1.0,1.0,1.0
+Base,F007,B007,SME,Accommodation and Food Services,0.045,0.045,0.0,1.0,1.0,1.0
+Base,F008,B008,Commercial,Healthcare and Social Assistance,0.012,0.012,0.0,1.0,1.0,1.0
+Base,F009,B009,SME,Transport Postal and Warehousing,0.035,0.035,0.0,1.0,1.0,1.0
+Base,F010,B010,Commercial Property,Construction,0.029,0.029,0.0,1.0,1.0,1.0
+Base,F011,B011,Commercial,Wholesale Trade,0.03,0.03,0.0,1.0,1.0,1.0
+Base,F012,B012,SME,Professional Services,0.016,0.016,0.0,1.0,1.0,1.0
+Mild downturn,F001,B001,SME,Construction,0.024,0.037311750000000005,0.5546562500000001,1.15,1.05,1.03
+Mild downturn,F002,B002,Commercial Property,Property Services,0.018,0.0272538,0.5141000000000002,1.12,1.05,1.03
+Mild downturn,F003,B003,SME,Retail Trade,0.032,0.045320000000000006,0.41625000000000023,1.1,1.0,1.03
+Mild downturn,F004,B004,Commercial,Manufacturing,0.021,0.028087500000000005,0.33750000000000013,1.07,1.0,1.0
+Mild downturn,F005,B005,Agribusiness,Agriculture,0.027,0.03645,0.3500000000000001,1.08,1.0,1.0
+Mild downturn,F006,B006,Property Investor,Property Services,0.014,0.021197400000000005,0.5141000000000004,1.12,1.05,1.03
+Mild downturn,F007,B007,SME,Accommodation and Food Services,0.045,0.06489,0.44200000000000017,1.12,1.0,1.03
+Mild downturn,F008,B008,Commercial,Healthcare and Social Assistance,0.012,0.0153,0.2749999999999999,1.02,1.0,1.0
+Mild downturn,F009,B009,SME,Transport Postal and Warehousing,0.035,0.04911812500000001,0.40337500000000026,1.09,1.0,1.03
+Mild downturn,F010,B010,Commercial Property,Construction,0.029,0.045085031250000004,0.5546562500000001,1.15,1.05,1.03
+Mild downturn,F011,B011,Commercial,Wholesale Trade,0.03,0.0405,0.3500000000000001,1.08,1.0,1.0
+Mild downturn,F012,B012,SME,Professional Services,0.016,0.021424000000000002,0.3390000000000002,1.04,1.0,1.03
+Severe downturn,F001,B001,SME,Construction,0.024,0.06858432000000002,1.8576800000000007,1.35,1.12,1.08
+Severe downturn,F002,B002,Commercial Property,Property Services,0.018,0.04877107200000001,1.7095040000000008,1.28,1.12,1.08
+Severe downturn,F003,B003,SME,Retail Trade,0.032,0.07560000000000001,1.3625000000000003,1.25,1.0,1.08
+Severe downturn,F004,B004,Commercial,Manufacturing,0.021,0.043365,1.065,1.18,1.0,1.0
+Severe downturn,F005,B005,Agribusiness,Agriculture,0.027,0.055755,1.065,1.18,1.0,1.0
+Severe downturn,F006,B006,Property Investor,Property Services,0.014,0.037933056,1.709504,1.28,1.12,1.08
+Severe downturn,F007,B007,SME,Accommodation and Food Services,0.045,0.11481750000000002,1.5515000000000003,1.35,1.0,1.08
+Severe downturn,F008,B008,Commercial,Healthcare and Social Assistance,0.012,0.022050000000000004,0.8375000000000004,1.05,1.0,1.0
+Severe downturn,F009,B009,SME,Transport Postal and Warehousing,0.035,0.08070300000000001,1.3058,1.22,1.0,1.08
+Severe downturn,F010,B010,Commercial Property,Construction,0.029,0.08287272000000001,1.8576800000000002,1.35,1.12,1.08
+Severe downturn,F011,B011,Commercial,Wholesale Trade,0.03,0.063,1.1,1.2,1.0,1.0
+Severe downturn,F012,B012,SME,Professional Services,0.016,0.03326400000000001,1.0790000000000006,1.1,1.0,1.08

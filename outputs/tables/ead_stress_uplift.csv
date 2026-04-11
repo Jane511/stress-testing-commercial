@@ -1,0 +1,37 @@
+scenario_name,facility_id,segment,product,base_ead,stressed_ead,ead_uplift_pct,drawdown_factor
+Base,F001,SME,Term Loan,760000.0,760000.0,0.0,0.0
+Base,F002,Commercial Property,Commercial Property Loan,1820000.0,1820000.0,0.0,0.0
+Base,F003,SME,Overdraft,420000.0,420000.0,0.0,0.0
+Base,F004,Commercial,Equipment Finance,500000.0,500000.0,0.0,0.0
+Base,F005,Agribusiness,Working Capital Line,540000.0,540000.0,0.0,0.0
+Base,F006,Property Investor,Residential Investment Loan,1180000.0,1180000.0,0.0,0.0
+Base,F007,SME,Commercial Credit Card,125000.0,125000.0,0.0,0.0
+Base,F008,Commercial,Term Loan,640000.0,640000.0,0.0,0.0
+Base,F009,SME,Overdraft,330000.0,330000.0,0.0,0.0
+Base,F010,Commercial Property,Commercial Property Loan,970000.0,970000.0,0.0,0.0
+Base,F011,Commercial,Invoice Finance,430000.0,430000.0,0.0,0.0
+Base,F012,SME,Term Loan,405000.0,405000.0,0.0,0.0
+Mild downturn,F001,SME,Term Loan,760000.0,798000.0,0.050000000000000044,0.0
+Mild downturn,F002,Commercial Property,Commercial Property Loan,1820000.0,1900000.0,0.04395604395604402,0.0
+Mild downturn,F003,SME,Overdraft,420000.0,461000.0,0.09761904761904772,0.1
+Mild downturn,F004,Commercial,Equipment Finance,500000.0,520000.0,0.040000000000000036,0.0
+Mild downturn,F005,Agribusiness,Working Capital Line,540000.0,582000.0,0.07777777777777772,0.1
+Mild downturn,F006,Property Investor,Residential Investment Loan,1180000.0,1200000.0,0.016949152542372836,0.0
+Mild downturn,F007,SME,Commercial Credit Card,125000.0,137250.0,0.09800000000000009,0.1
+Mild downturn,F008,Commercial,Term Loan,640000.0,650000.0,0.015625,0.0
+Mild downturn,F009,SME,Overdraft,330000.0,364500.0,0.1045454545454545,0.1
+Mild downturn,F010,Commercial Property,Commercial Property Loan,970000.0,1000000.0,0.030927835051546282,0.0
+Mild downturn,F011,Commercial,Invoice Finance,430000.0,463500.0,0.07790697674418601,0.1
+Mild downturn,F012,SME,Term Loan,405000.0,410000.0,0.012345679012345734,0.0
+Severe downturn,F001,SME,Term Loan,760000.0,800000.0,0.05263157894736836,0.0
+Severe downturn,F002,Commercial Property,Commercial Property Loan,1820000.0,1900000.0,0.04395604395604402,0.0
+Severe downturn,F003,SME,Overdraft,420000.0,500000.0,0.19047619047619047,0.25
+Severe downturn,F004,Commercial,Equipment Finance,500000.0,520000.0,0.040000000000000036,0.0
+Severe downturn,F005,Agribusiness,Working Capital Line,540000.0,600000.0,0.11111111111111116,0.25
+Severe downturn,F006,Property Investor,Residential Investment Loan,1180000.0,1200000.0,0.016949152542372836,0.0
+Severe downturn,F007,SME,Commercial Credit Card,125000.0,150000.0,0.19999999999999996,0.25
+Severe downturn,F008,Commercial,Term Loan,640000.0,650000.0,0.015625,0.0
+Severe downturn,F009,SME,Overdraft,330000.0,400000.0,0.21212121212121215,0.25
+Severe downturn,F010,Commercial Property,Commercial Property Loan,970000.0,1000000.0,0.030927835051546282,0.0
+Severe downturn,F011,Commercial,Invoice Finance,430000.0,500000.0,0.16279069767441867,0.25
+Severe downturn,F012,SME,Term Loan,405000.0,410000.0,0.012345679012345734,0.0

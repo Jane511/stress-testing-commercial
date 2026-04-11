@@ -1,0 +1,5 @@
+scenario_name,pd_multiplier,lgd_multiplier,ead_multiplier,collateral_haircut_pct,recovery_delay_months,industry_overlay_flag,property_market_softness_flag,concentration_overlay_flag,notes
+Base,1.00,1.00,1.00,0.00,0,false,false,false,"No stress overlay; preserves upstream base risk components."
+Mild downturn,1.25,1.10,1.05,0.08,3,true,true,true,"Moderate macro deterioration with softer collateral values and higher utilisation."
+Severe downturn,1.75,1.30,1.12,0.18,9,true,true,true,"Severe downturn with sector pressure, property weakness, delayed recoveries, and drawdown stress."
+

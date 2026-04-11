@@ -1,0 +1,13 @@
+facility_id,borrower_id,segment,product,industry,state,outstanding_balance,undrawn_amount,current_limit,collateral_value,base_pd,base_lgd,base_ead,base_expected_loss,property_secured_flag,score_band,arrears_status,refinance_maturity_months,upstream_source
+F001,B001,SME,Term Loan,Construction,NSW,750000,50000,800000,900000,0.024,0.28,760000,5107.20,true,B,Current,18,expected-loss-engine-commercial
+F002,B002,Commercial Property,Commercial Property Loan,Property Services,VIC,1800000,100000,1900000,2300000,0.018,0.22,1820000,7207.20,true,A,Current,24,expected-loss-engine-commercial
+F003,B003,SME,Overdraft,Retail Trade,QLD,300000,200000,500000,400000,0.032,0.38,420000,5107.20,false,C,Current,12,expected-loss-engine-commercial
+F004,B004,Commercial,Equipment Finance,Manufacturing,SA,520000,0,520000,450000,0.021,0.34,500000,3570.00,false,B,Current,30,expected-loss-engine-commercial
+F005,B005,Agribusiness,Working Capital Line,Agriculture,WA,450000,150000,600000,600000,0.027,0.31,540000,4519.80,false,B,Current,10,expected-loss-engine-commercial
+F006,B006,Property Investor,Residential Investment Loan,Property Services,NSW,1200000,0,1200000,1550000,0.014,0.18,1180000,2973.60,true,A,Current,36,expected-loss-engine-commercial
+F007,B007,SME,Commercial Credit Card,Accommodation and Food Services,VIC,90000,60000,150000,0,0.045,0.75,125000,4218.75,false,D,30 DPD,6,expected-loss-engine-commercial
+F008,B008,Commercial,Term Loan,Healthcare and Social Assistance,NSW,650000,0,650000,500000,0.012,0.32,640000,2457.60,false,A,Current,42,expected-loss-engine-commercial
+F009,B009,SME,Overdraft,Transport Postal and Warehousing,QLD,220000,180000,400000,150000,0.035,0.48,330000,5544.00,false,C,Current,9,expected-loss-engine-commercial
+F010,B010,Commercial Property,Commercial Property Loan,Construction,VIC,950000,50000,1000000,1100000,0.029,0.30,970000,8439.00,true,C,Current,15,expected-loss-engine-commercial
+F011,B011,Commercial,Invoice Finance,Wholesale Trade,NSW,380000,120000,500000,0,0.030,0.55,430000,7095.00,false,C,Current,8,expected-loss-engine-commercial
+F012,B012,SME,Term Loan,Professional Services,ACT,410000,0,410000,350000,0.016,0.29,405000,1879.20,false,A,Current,28,expected-loss-engine-commercial
