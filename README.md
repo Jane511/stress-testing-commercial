@@ -17,10 +17,8 @@ Upstream inputs:
 
 Downstream consumers:
 - `RAROC-pricing-and-return-hurdle`
-- `portfolio-monitor-commercial` (planned downstream repo; not yet published on the public portfolio)
+- `portfolio-monitor-commercial`
 - `RWA-capital-commercial`
-
-Some downstream modules are planned but not yet published on the public portfolio.
 
 ## Example input datasets
 
@@ -105,4 +103,3 @@ python -m pytest
 - All data is synthetic and is provided for demonstration only.
 - Scenario multipliers and overlays are illustrative rather than macro-model calibrated.
 - The repo is intended to show workflow design and reporting quality, not to represent a live bank stress-testing framework.
-- Some downstream modules are planned but not yet published on the public portfolio.

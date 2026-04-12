@@ -38,7 +38,5 @@ The repository is structured for employer review:
 The outputs are positioned to feed:
 
 - `RAROC-pricing-and-return-hurdle`
-- `portfolio-monitor-commercial` (planned downstream repo; not yet published on the public portfolio)
+- `portfolio-monitor-commercial`
 - `RWA-capital-commercial`
-
-Some downstream modules are planned but not yet published on the public portfolio.

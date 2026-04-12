@@ -201,7 +201,7 @@ Where real internal stress data is unavailable:
 Downstream use:
 The README must explicitly state that this repo feeds:
 - RAROC-pricing-and-return-hurdle
-- portfolio-monitor-commercial (planned downstream repo; not yet published on the public portfolio)
+- portfolio-monitor-commercial
 - RWA-capital-commercial
 
 Important clean-up rules:
