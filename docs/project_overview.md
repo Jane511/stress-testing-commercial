@@ -1,4 +1,4 @@
-# Project Overview - stress-testing-commercial
+# Project Overview
 
 `stress-testing-commercial` is the downstream scenario and stress-testing engine in the public commercial credit-risk stack.
 
