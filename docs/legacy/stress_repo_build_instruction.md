@@ -211,7 +211,7 @@ Important clean-up rules:
 - do not leave broken imports or empty notebooks
 - make the repo feel complete
 
-Expected final response from Codex:
+Expected final response from the assistant:
 At the end, provide:
 1. the final repo tree
 2. a summary of all files created or changed
